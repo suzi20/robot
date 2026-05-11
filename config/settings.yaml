@@ -1,0 +1,55 @@
+# LLM 配置 (DeepSeek)
+llm_model: deepseek-chat
+llm_base_url: https://api.deepseek.com
+
+# Embedding 配置 (local = fastembed 本地模型)
+embedding_provider: local
+embedding_model: BAAI/bge-small-zh-v1.5
+embedding_dimension: 512
+
+# ChromaDB 配置
+chroma_persist_dir: ./knowledge_base
+chroma_collection_name: documents
+
+# 文本分块配置
+chunk_size: 512
+chunk_overlap: 64
+
+# 检索配置
+retrieval_top_k: 5
+retrieval_score_threshold: 0.6
+retrieval_agentic_enabled: true
+retrieval_multi_query_count: 3
+retrieval_candidate_multiplier: 3
+
+# MCP 配置
+mcp_config_path: ./mcp_config/servers.yaml
+
+# Agent 配置
+system_prompt_template: zh
+max_tool_rounds: 10
+enable_streaming: true
+
+# Chatbot 人设配置
+chatbot_mode: true
+assistant_name: 小智
+user_name: 你
+relationship_style: 像一个可靠、松弛、有边界感的朋友
+personality: 温暖、自然、好奇、会认真听人说话，也能给出清楚实用的建议
+response_style: 口语化、简洁、有来有回；不要每次都写成正式报告，除非用户要求
+proactive_follow_up: true
+chat_memory_enabled: true
+chat_history_path: ./data/chat_history.json
+chat_history_max_messages: 30
+
+# 长期语义记忆配置
+long_term_memory_enabled: true
+memory_collection_name: long_term_memories
+memory_top_k: 5
+memory_score_threshold: 0.55
+memory_max_chars_per_turn: 1200
+
+# 可观测性与评测配置
+observability_enabled: true
+observability_log_path: ./logs/agent_events.jsonl
+eval_report_path: ./logs/eval_report.json

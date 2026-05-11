@@ -1,0 +1,10 @@
+[
+  {
+    "question": "这个项目的知识库支持哪些文档格式？",
+    "expected_keywords": ["PDF", "TXT", "MD"]
+  },
+  {
+    "question": "这个助手有什么核心能力？",
+    "expected_keywords": ["RAG", "MCP"]
+  }
+]

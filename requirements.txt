@@ -1,0 +1,33 @@
+# 核心框架
+qwen-agent>=0.0.11
+
+# MCP 协议支持 (qwen-agent 需 <1.27.0 以兼容 mcp.client.stdio)
+mcp>=1.10.0,<1.27.0
+
+# 向量数据库
+chromadb>=0.6.0
+
+# LLM API (DeepSeek 使用 openai 包，被 qwen-agent 依赖)
+# openai>=1.0.0 (被 qwen-agent 自动引入)
+
+# 本地 Embedding (fastembed = 轻量 ONNX 方案，无需 PyTorch)
+fastembed>=0.6.0
+
+# DashScope Embedding (备选，不需要可移除)
+# dashscope>=1.22.0
+
+# 文档加载与处理
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-text-splitters>=1.0.0
+pypdf>=5.0.0
+
+# 配置管理
+pyyaml>=6.0
+pydantic>=2.0
+pydantic-settings>=2.0
+python-dotenv>=1.0
+
+# 工具库
+json5>=0.9.0
+rich>=13.0

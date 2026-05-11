@@ -1,0 +1,31 @@
+# MCP 服务配置
+# 在此注册你的 MCP 服务器，qwen-agent 会自动发现工具并注入 agent。
+# 格式参考: https://github.com/modelcontextprotocol
+#
+# 注意:
+# - stdio 类型的服务需要对应命令可执行 (如 uvx, npx)
+# - 配置后启动 agent 时会自动连接，连接失败会报错
+# - 如果当前没有可用的 MCP 服务，保持此文件内容为空即可
+
+mcpServers:
+  # 示例: 时间查询服务 (需要安装 uvx: pip install uvx)
+  # time:
+  #   command: "uvx"
+  #   args: ["mcp-server-time"]
+
+  # 示例: 文件系统操作服务
+  # filesystem:
+  #   command: "npx"
+  #   args: ["-y", "@modelcontextprotocol/server-filesystem", "./data"]
+
+  # 示例: 网络搜索服务 (需要 BRAVE_API_KEY)
+  # brave-search:
+  #   command: "npx"
+  #   args: ["-y", "@anthropic-ai/mcp-server-brave-search"]
+  #   env:
+  #     BRAVE_API_KEY: "${BRAVE_API_KEY}"
+
+  # 示例: SQLite 数据库查询
+  # sqlite:
+  #   command: "uvx"
+  #   args: ["mcp-server-sqlite", "--db-path", "./data/local.db"]
