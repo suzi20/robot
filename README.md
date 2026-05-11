@@ -111,20 +111,3 @@ memory_collection_name: long_term_memories
 observability_enabled: true
 observability_log_path: ./logs/agent_events.jsonl
 ```
-
-## 简历亮点表达
-
-可以概括为：
-
-> 基于 MCP + Agentic RAG + 长期记忆 + 可观测评测体系构建智能体问答系统，实现文档知识库、查询改写、多路召回、候选重排、语义记忆召回和离线评测闭环。
-
-## 安全说明
-
-以下文件和目录不会上传到 Git：
-
-- `.env`
-- `knowledge_base/`
-- `logs/`
-- `data/chat_history.json`
-- `__pycache__/`
-
